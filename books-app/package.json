@@ -1,0 +1,25 @@
+{
+  "name": "books-app",
+  "version": "1.0.0",
+  "description": "Books App",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "build": "gulp sass & gulp scripts & gulp angular",
+    "watch": "gulp watch",
+    "dev": "gulp sass & gulp scripts & gulp angular & gulp watch"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^2.0.0",
+    "http-server": "^0.9.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1"
+  }
+}

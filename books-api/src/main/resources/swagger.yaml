@@ -1,0 +1,69 @@
+swagger: "2.0"
+info:
+  description: "Bookshelf RESTful API"
+  version: "1.0.0"
+  title: "Books"
+  contact:
+    email: "chavesrodolfo@gmail.com"
+host: "books-api-books.a3c1.starter-us-west-1.openshiftapps.com"
+basePath: "/"
+tags:
+  - name: books
+schemes:
+  - http
+paths:
+  /books:
+    post:
+      tags:
+        - books
+      summary: Finds Books by part of its title or description.
+      description: You can find all books not using 'q' (query param) or filter some results using a 'q' param on the request.
+      operationId: locate
+      produces:
+        - application/json
+      parameters:
+        - name: q
+          in: query
+          required: false
+          type: string
+          description: Query parameter to find a book
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Bookshelf'
+definitions:
+  BookVO:
+    type: object
+    properties:
+      isbn:
+        type: string
+      title:
+        type: string
+      subtitle:
+        type: string
+      authors:
+        type: array
+        items:
+          type: string
+      published:
+        type: string
+        format: date-time
+      publisher:
+        type: string
+      pages:
+        type: integer
+        format: int32
+      description:
+        type: string
+      instock:
+        type: boolean
+  Bookshelf:
+    type: object
+    properties:
+      bookShelf:
+        type: array
+        items:
+          $ref: '#/definitions/BookVO'

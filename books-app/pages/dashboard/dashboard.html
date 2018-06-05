@@ -1,0 +1,29 @@
+<div id="dashboard">
+	<h1 class="heading">Books</h1>
+	<p>{{message}}</p>
+
+	<form id="form-search">
+		<div class="row">
+			<div class="col">
+				<input ng-model="q" class="form-control form-control-lg" type="text" placeholder="Find a book...">
+			</div>
+			<div class="col">
+				<button class="btn btn-primary button-search" type="submit" ng-click="search()">Search</button>
+			</div>
+		</div>
+	</form>
+	
+	<div id="book-list">
+		
+		<span ng-if="isLoading">Loading...</span>
+
+		<div id="book-list-item" ng-repeat="book in books">
+			<h4>{{book.title}}</h4> <span ng-hide="book.instock">(out of Stock)</span>
+			/<span id="book-list-item" ng-repeat="author in book.authors"> {{author}} / </span>
+			<p>{{book.description}}</p>
+			<p>{{book.published | date}} | {{book.publisher}} | ISBN {{book.isbn}} | {{book.pages}} pages</p>
+			
+		</div>
+	</div>
+	
+</div>

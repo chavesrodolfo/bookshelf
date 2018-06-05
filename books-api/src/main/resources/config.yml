@@ -1,0 +1,30 @@
+appName: Book
+
+server:
+  applicationConnectors:
+  - type: http 
+    port: 8080
+  adminConnectors:
+  - type: http
+    port: 8081
+
+swagger:
+  resourcePackage: io.github.chavesrodolfo.books.resources
+
+logging:
+  level: INFO
+  appenders:
+    - type: console
+      threshold: INFO
+    - type: file
+      currentLogFilename: /tmp/book.log
+      archivedLogFilenamePattern: /tmp/book-%d.log.gz
+      archivedFileCount: 5
+      timeZone: UTC
+  
+dataSourceFactory:
+  driverClass: org.h2.Driver
+  user: sa
+  password: sa
+  url: jdbc:h2:file:/tmp/booksdb
+  
