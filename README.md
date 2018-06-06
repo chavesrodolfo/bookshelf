@@ -3,6 +3,7 @@ Locate a book by part of its title or description
 
 > Published in the Cloud Red Hat OpenShift
 * [Demo](http://books-app-books.a3c1.starter-us-west-1.openshiftapps.com)
+* [Docs](https://chavesrodolfo.github.io/bookshelf/index.html)
 
 ## Stack
 
