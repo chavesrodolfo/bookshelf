@@ -10,7 +10,6 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<docker.image.prefix>chavesrodolfo</docker.image.prefix>
-		<org.springframework.version>4.3.10.RELEASE</org.springframework.version>
 		<project.name>books</project.name>
 	</properties>
 
@@ -21,12 +20,6 @@
 			<artifactId>flyway-core</artifactId>
 			<version>5.1.1</version>
 		</dependency>
-
-		<!-- <dependency> -->
-		<!-- <groupId>io.dropwizard</groupId> -->
-		<!-- <artifactId>dropwizard-core</artifactId> -->
-		<!-- <version>1.3.2</version> -->
-		<!-- </dependency> -->
 
 		<dependency>
 			<groupId>com.smoketurner</groupId>
@@ -58,40 +51,11 @@
 			<version>3.9.1</version>
 		</dependency>
 
-		<!-- <dependency> -->
-		<!-- <groupId>mysql</groupId> -->
-		<!-- <artifactId>mysql-connector-java</artifactId> -->
-		<!-- <version>5.1.28</version> -->
-		<!-- </dependency> -->
-
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>1.4.191</version>
 		</dependency>
-
-		<!-- <dependency> -->
-		<!-- <groupId>junit</groupId> -->
-		<!-- <artifactId>junit</artifactId> -->
-		<!-- <version>4.8.1</version> -->
-		<!-- <scope>test</scope> -->
-		<!-- </dependency> -->
-
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework</groupId> -->
-		<!-- <artifactId>spring-context</artifactId> -->
-		<!-- <version>${org.springframework.version}</version> -->
-		<!-- </dependency> -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework</groupId> -->
-		<!-- <artifactId>spring-jdbc</artifactId> -->
-		<!-- <version>${org.springframework.version}</version> -->
-		<!-- </dependency> -->
-		<!-- <dependency> -->
-		<!-- <groupId>javax.persistence</groupId> -->
-		<!-- <artifactId>persistence-api</artifactId> -->
-		<!-- <version>1.0</version> -->
-		<!-- </dependency> -->
 
 	</dependencies>
 
@@ -179,8 +143,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
-
 		</plugins>
 	</build>
 
